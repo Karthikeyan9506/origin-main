@@ -6,11 +6,11 @@ if [[ $GIT_BRANCH == "origin/dev" ]]; then
     ./build.sh
 
     # Login to Docker Hub (replace with your actual Docker Hub credentials)
-    docker login -u karthikeyan9506 -p dckr_pat_S24xwX_73dmdhHpTqKr-3UVNqds
+    docker login -u karthikeyan9506 -p $DOCKER_PASSWORD
 
   
     # Tag the image
-    docker tag react-appimg karthikeyan9506/dev
+    docker tag reactapp karthikeyan9506/dev
 
     # Push the image to the Dev Docker Hub repository
     docker push karthikeyan9506/dev
@@ -20,11 +20,11 @@ elif [[ $GIT_BRANCH == "origin/main" ]]; then
     ./build.sh
 
     # Login to Docker Hub (replace with your actual Docker Hub credentials)
-    docker login -u karthikeyan9506 -p dckr_pat_S24xwX_73dmdhHpTqKr-3UVNqds
+    docker login -u karthikeyan9506 -p $DOCKER_PASSWORD
 
    
     # Tag the image
-    docker tag react-appimg karthikeyan9506/prod 
+    docker tag reactapp karthikeyan9506/prod 
 
     # Push the image to the Prod Docker Hub repository
     docker push karthikeyan9506/prod
