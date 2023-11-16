@@ -3,7 +3,7 @@
 # Checking the Git branch
 if [[ $GIT_BRANCH == "origin/dev" ]]; then
     # Build your project
-    ./build.sh
+    ./scripts/build.sh
 
     # Login to Docker Hub (replace with your actual Docker Hub credentials)
     docker login -u karthikeyan9506 -p $DOCKER_PASSWORD
@@ -17,7 +17,7 @@ if [[ $GIT_BRANCH == "origin/dev" ]]; then
 
 elif [[ $GIT_BRANCH == "origin/main" ]]; then
     # Build your project
-    ./build.sh
+    ./scripts/build.sh
 
     # Login to Docker Hub (replace with your actual Docker Hub credentials)
     docker login -u karthikeyan9506 -p $DOCKER_PASSWORD
