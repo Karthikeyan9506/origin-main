@@ -4,17 +4,7 @@ pipeline {
         DOCKER_HUB_CREDENTIALS = credentials('DOCKER_PASSWORD')
     }
     stages {
-        stage('Build') {
-            steps {
-                script {
-                    // Run the build.sh script
-                    sh 'chmod +x ./scripts/build.sh'
-                    sh './scripts/build.sh'
-                }
-            }
-        }
-        
-        stage('Deploy') {
+        stage('Build and Deploy') {
             steps {
                 script {
                     // Run the deploy.sh script
