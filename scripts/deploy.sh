@@ -10,7 +10,7 @@ if [[ $GIT_BRANCH == "origin/dev" ]]; then
 
   
     # Tag the image
-    docker tag reactapp karthikeyan9506/dev
+    docker tag reactapp karthikeyan9506/dev:reactapp
 
     # Push the image to the Dev Docker Hub repository
     docker push karthikeyan9506/dev
@@ -24,7 +24,7 @@ elif [[ $GIT_BRANCH == "origin/main" ]]; then
 
    
     # Tag the image
-    docker tag reactapp karthikeyan9506/prod 
+    docker tag reactapp karthikeyan9506/prod:reactapp 
 
     # Push the image to the Prod Docker Hub repository
     docker push karthikeyan9506/prod
