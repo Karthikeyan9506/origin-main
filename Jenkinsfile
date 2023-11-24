@@ -7,7 +7,7 @@ pipeline {
                     // Run the deploy.sh script
                      sh 'chmod +x ./scripts/deploy.sh'
                     sh './scripts/deploy.sh'
-                    sh 'docker build -t reactimage:1.0 .'
+                    
                 }
             }
         }
