@@ -7,7 +7,7 @@ pipeline {
                     // Run the deploy.sh script
                      sh 'chmod +x ./scripts/build.sh'
                      sh 'chmod +x ./scripts/deploy.sh'
-                    sh './scripts/deploy.sh'
+                     sh './scripts/deploy.sh'
                     
                 }
             }
@@ -23,3 +23,4 @@ pipeline {
         }
     }
 }
+
